@@ -5,21 +5,9 @@ using System.Collections.Generic;
 
 public class PCQ2016Target : TargetRules
 {
-	public PCQ2016Target(TargetInfo Target)
+	public PCQ2016Target(TargetInfo Target) : base (Target)
 	{
 		Type = TargetType.Game;
-	}
-
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "PCQ2016" } );
+		ExtraModuleNames.Add("PCQ2016");
 	}
 }

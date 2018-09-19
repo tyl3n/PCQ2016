@@ -61,5 +61,5 @@ void AFloatingPlatformSpawner::instantiateBoundingBoxCollider(const FVector &box
 	}
 
 	AFloatingPlatform *FloatingPlatform = m_world->SpawnActor<AFloatingPlatform>(FloatingPlatformClass, GetActorLocation(), GetActorRotation());
-	FloatingPlatform->initSpawnValues(Mesh->GetRelativeTransform().GetTranslation(), Mesh->GetComponentScale(), boxExtent, Mesh->StaticMesh, WaterLevel);
+	FloatingPlatform->initSpawnValues(Mesh->GetRelativeTransform().GetTranslation(), Mesh->GetComponentScale(), boxExtent, Mesh->GetStaticMesh(), WaterLevel);
 }

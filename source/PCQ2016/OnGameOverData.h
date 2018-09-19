@@ -4,13 +4,9 @@
 
 #include "EventData.h"
 
-class OnGameOverData : public EventData
+struct OnGameOverData : public EventData
 {
-public:
 	OnGameOverData(int winnerId);
-
 	int getWinnerId();
-
-private:
 	int m_winnerId;
 };

@@ -22,5 +22,5 @@ public:
 	virtual void Tick( float DeltaSeconds ) override;
 
 	UFUNCTION()
-	void OnBeginOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	void OnBeginOverlap(class UPrimitiveComponent* overlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 };

@@ -18,7 +18,6 @@ AKillZone::AKillZone()
 void AKillZone::BeginPlay()
 {
 	Super::BeginPlay();
-	
 	Collider->OnComponentBeginOverlap.AddDynamic(this, &AKillZone::OnBeginOverlap);
 }
 
@@ -29,7 +28,7 @@ void AKillZone::Tick( float DeltaTime )
 
 }
 
-void AKillZone::OnBeginOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+void AKillZone::OnBeginOverlap(class UPrimitiveComponent* overlappedComponent ,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
 	if (OtherActor->IsA(AFigther::StaticClass()))
 	{

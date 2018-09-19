@@ -1,7 +1,5 @@
 #pragma once
-
-class EventData
+struct EventData
 {
-public:
 	virtual ~EventData() { };
 };
